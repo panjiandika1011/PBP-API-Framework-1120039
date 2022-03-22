@@ -1,0 +1,29 @@
+<a href="/">Home</a>
+<hr>
+
+<table class>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Date Time</th>
+        <th>Patient ID</th>
+        <th>Med Staff ID</th>
+        
+    </tr>
+    </thead>
+    <tbody>
+    {{ range . }}
+    
+        <tr>
+			<td> {{ .ID }} </td>
+			<td> {{ .DateTime }} </td>
+            <td> {{ .PatientID }} </td>
+			<td> {{ .MedstaffID }} </td>
+			<td><a href="/delete/{{ .ID }}">Delete</a></td>
+		</tr>
+
+		{{ end }}
+  </tbody>
+</table>
+
+<p>You are vieweing schedule json</p>
